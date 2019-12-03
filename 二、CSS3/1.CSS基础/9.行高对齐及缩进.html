@@ -1,0 +1,33 @@
+1.line-height:行间距
+2.text-align:水平对齐方式
+3.text-indent:首行缩进<!--以em为单位，1个em就是一个文字的长度-->
+4.letter-spacing:字间距
+5.word-spacing:词间距
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    p{
+        line-height: 20px;  
+        text-indent: 2em;
+    }
+    h2{
+        text-align: center;
+    }
+    div{
+        letter-spacing: 12px;
+    }
+    p{
+        word-spacing: 10px;/*针对于英文，中文无效*/
+    }
+    </style>
+</head>
+<body>
+    <div>我是熊大</div>
+    <p>my name is andy</p>
+</body>
+</html>

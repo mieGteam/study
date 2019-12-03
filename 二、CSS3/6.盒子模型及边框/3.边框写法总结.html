@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            border:0;/*没有边框*/
+        }
+    .user {
+        border-width: 1px;
+        background-color: pink;
+        border-style: solid;
+    }
+    .nc {
+        border-top-width: 1px;
+        border-top-color: hotpink;
+        border-top-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: hotpink;
+        border-bottom-style: solid;
+    }
+    /* 综合写法 */
+        .email {
+            border-top: 1px solid red ; /*上边框 宽度 样式 颜色 一起写*/
+            border-bottom: 1px solid green ; /*上边框 宽度 样式 颜色 一起写*/
+        }
+        .tel {
+            border:1px solid skyblue;
+        }
+    </style>
+</head>
+<body>
+    用户名：<input type="text" class="user"><br>
+    昵  称：<input type="text"class="nc"><br>
+    邮  箱：<input type="text" class="email"><br>
+    手  机：<input type="tel" class="tel"><br>
+</body>
+</html>

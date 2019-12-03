@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*优点是简单，但是超出父级的元素和文本都会被隐藏（溢出隐藏）*/
+    .father { 
+        border: 1px solid red;
+        overflow: hidden;/* auto/scroll/hidden：触发BFC，BFC可以清除浮动*/
+    }
+    .damao {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+    }
+    .ermao {
+        width: 150px;
+        height: 100px;
+        background-color: purple;
+        float: left;
+    }
+    .xiaomi {
+        width: 300px;
+        height: 120px;
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="xiaomi"></div>
+</body>
+</html>

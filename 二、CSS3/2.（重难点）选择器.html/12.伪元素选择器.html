@@ -1,0 +1,39 @@
+E::first-letter 文本的第一个单词或字（如中文、日文、韩文等）
+E::first-line 文本第一行
+E::selection 可改变选中文本的样式
+E::befor 在盒子内部的前面插入的内容，与content连用
+E::after 在盒子内部的前面插入的内容，与content连用
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* :first-child 伪类选择器
+    ::first-letter 伪元素选择器 */
+    p::first-letter{/*选择第一个字*/
+    color: red;
+    font-size: 50px;
+    }
+    p::first-line{/*选择第一行*/
+        color: green;
+        font-size: 50px;
+    }
+    p::selection{/*当我们选择文本的时候可以变化的样式*/
+        color:pink
+    }
+    div::before{
+        content:"俺";
+    }
+    div::after{
+        content:"18岁";
+    }
+    /*HTML中没有对应的元素，但是所有用法和表现行为和真正页面元素一样*/
+    </style>
+</head>
+<body>
+    <div>今年</div>
+</body>
+</html>

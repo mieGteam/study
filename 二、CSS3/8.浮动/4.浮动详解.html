@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        float: left; /*默认是left*/
+    }
+    div:last-child {
+        height: 300px;
+        width: 140px;
+        background-color: skyblue;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <!-- 如果两个盒子都不加浮动，就是标准流 块级元素自上而下显示-->
+    <!-- 浮动脱离标准流，不占位置，会影响标准流。浮动只有左右浮动 -->
+</body>
+</html>

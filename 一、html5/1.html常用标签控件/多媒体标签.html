@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多媒体标签</title>
+</head>
+<body>
+    <h3>引入网络视频的方式</h3>
+    <embed src="视频的html链接" type="">
+        <hr>
+
+<h3>引入音乐的方式</h3>
+<audio src="xxx.mp3" autoplay="autoplay" controls="" loop="2"></audio>
+<!-- autoplay:自动播放，controls：是否显示播放控件，loop：循环播放次数，-1为无限 -->
+为了浏览器兼容，我们需要做2-3种的音乐文件，ogg+mp3/wav<!--source控件-->
+<audio src="" controls autoplay>
+    <source src="xxx.mp3">
+    <source src="xxx.ogg">
+</audio>
+<hr>
+
+
+<h3>引入小视频的方式</h3>
+<video src="mp4.mp4" autoplay controls width="500"  height="800" preload="auto" poster="图片的路径"></video><!--preload是预加载的方式="auto"表示自动加载全部
+                                                                              Poster为视频标签独有                        none表示不许加载     
+                                                                              当视频不能播放或没有播放时，用图片代替        metadata只加载元数据，先加载一点，然后边播放边加载 -->
+我们的视频支持ogg,mp4,webm三种格式
+<video src="" controls autoplay>
+    <source src="mp4.ogg">
+    <source src="mp4.mp4">
+    <source src="np4.webm">
+
+        
+</video>
+<video  src="123.mp4" controls autoplay preload>
+    我们都是一家人
+</video>
+</body>
+</html>

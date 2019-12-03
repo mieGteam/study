@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        height: 100px;
+        width: 100px;  
+        background-color: purple;
+        cursor: default; /*默认值，小白*/
+    }
+    .pointer {
+        cursor: pointer;/*小手*/
+        background-color: pink;
+    }
+    .move {
+        cursor: move;/*移动*/
+        background-color:purple ;
+    }
+    .text {
+        cursor: text;/*文本*/
+        background-color:purple;
+    }
+    </style>
+</head>
+<body>
+    <div>鼠标经过div会变换鼠标样式,小白  默认的default</div>
+    <div class="pointer">鼠标经过div会变换鼠标样式，小手，pointer</div>
+    <div class="move">鼠标经过div会变换鼠标样式，移动，move</div>
+    <div class="text">鼠标经过div会变换鼠标样式,文本，text</div>
+
+</body>
+</html>

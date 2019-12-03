@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    section {
+        width: 1000px;
+        height: 600px;
+        border: 2px solid pink;
+        margin: 100px auto;
+        display: flex;
+        /* justify-content: flex-start;子元素从父容器的开头排列，默认值 */
+        /* justify-content: flex-end;子元素从父容器的结尾开始排序，但是盒子顺序不变 */
+        /* justify-content: center;子元素从父容器的居中位置排列 */
+        /* justify-content: space-between;左右盒子贴近父盒子，中间的空隙平均分配 */
+        justify-content: space-around;/*相当于给每个盒子添加了左右margin属性*/
+        /* 垂直对齐 */
+        /* align-items: flex-start;沿着父盒子开始，上对齐 */
+        /* align-items: flex-end;沿着父盒子结尾，下对齐 */
+        /* align-items: center;垂直居中*/
+        align-items: stretch;/*相当于 height100%,让子元素的高度拉伸以使用于父亲的高度*/
+    }
+    div {
+        width: 250px;
+        /* height: 200px; */
+    }
+    div:first-child{
+        background-color: pink;
+    }
+    div:nth-child(2){
+        background-color: purple;
+    }
+    div:last-child{
+        background-color: skyblue;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>

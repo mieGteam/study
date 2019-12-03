@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    p{
+        background-color: pink;
+        position: absolute;
+        /* top: 50%;
+        left: 50%;
+        margin-top: (-本身的一半);
+        margin-left: (-本身的一半); */
+        top: 0;
+        bottom: 0;
+        left: 0;  
+        right: 0;
+        margin: auto;
+    }
+    </style>
+</head>
+<body>
+    <!-- 就定位而言，因为要设置top 和 left值，先定位50%的位置，再走本身的一半 -->
+    <!-- 可以兼容各种浏览器，而且不需要设置高度 -->
+    <p>段落</p>
+</body>
+</html>

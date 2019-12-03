@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* 0，   0，   0，   0 特殊性公式 */
+    .king {/*类选择器*/
+        color: blue;
+    }
+
+    div {/*标签选择器*/
+        color: pink;
+    }
+    :first-child { /*伪类选择器*/
+        color: green;
+    }
+    #wang {/*ID选择器*/
+        color: red;
+    }
+    div {
+        color: orange!important;
+    }
+    </style>
+</head>
+<body>
+    <div class="king" id="wang" style=color:skyblue>王者荣耀</div>
+</body>
+</html>
+
+<!-- <h1>CSS特殊性</h1>
+标签选择器的贡献值为   0，0，0，1
+类、伪类选择器的贡献值为     0，0，1，0
+每个ID的贡献值为       0，1，0，0
+行内式的贡献值为       1，0，0，0
+
+最大的不是选择器：div{
+    color:orange!important;
+}
+important级别最高,贡献值无穷大，一旦出现优先执行 -->

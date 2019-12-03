@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单和表单控件</title>
+</head>
+<body>
+  <h3>表单</h3> 
+  表单分为三个部分：
+  1.表单域<br> 
+  2.提示文本<br>
+  3.表单控件<br>
+  <hr>
+
+
+  <h3>input控件</h3>
+  1.input是个单标签  <input />
+  2.input就可以看作是变色龙，可以通过type（类型）属性变换形状。
+  <hr />
+
+  
+  <p>用户名：<input type="text" disabled value="请输入你的名字"/></p><!--文本框，value是默认值,disabled="true"设置文本框不可输入-->
+  <p>密&nbsp;码：<input type="password" /></p><!--密码框-->
+  <!-- 当需要限定输入位数时，在原代码后加maxlength="" -->
+  密码：<input type="password" maxlength="6" />
+  <hr>
+     例子： <input type="text" value="请输入银行密码" readonly>
+      <!--readonly只读不可写-->
+  <hr>
+  
+  
+
+  性别：<input type="radio" name="sex"/>女<input type="radio" name="sex"/>男<br>  <!--单选框-->
+        <!-- 单选框如果是一组，我们通过相同的name值来实现 -->
+        <hr>
+
+       
+       
+        <h3>爱好</h3>
+        爱好：<input type="checkbox" />足球<input type="checkbox" />篮球<input type="checkbox" />乒乓球
+        <!-- 复选框可以同时选多个 -->
+<hr>   
+
+
+
+
+当需要有默认勾选项时，只需要在默认项后面加checked
+性别：<input type="radio" name="sex" checked />女<input type="radio" name="sex"/>男<br>
+<hr>
+
+
+<h1>按钮控件</h1>
+搜索：<input type="button" value="搜索" />  <!--普通按钮--><br />
+      <input type="Submit" value="提交表单" /><!--提交按钮--><br />
+      <input type="reset" value="重置表单" /><!--重置按钮--><br />
+      <input type="image" src="im.jpg" /><!--图片按钮-->
+      上传头像：
+      <input type="file" /><!--文件按钮-->
+
+</body>
+</html>

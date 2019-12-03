@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .father {
+        width: 300px;
+        border: 1px solid red;
+        /* overflow: hidden; */
+        /* float: left;给父亲创建了BFC */
+        position: absolute;/*或者fixed*/
+    }
+    .son1, .son2{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+    }
+    .son2{
+        background-color: purple;
+    }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son1"></div>
+        <div class="son2"></div>
+    </div>
+</body>
+</html>

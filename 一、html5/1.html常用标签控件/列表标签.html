@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表</title>
+</head>
+<body>
+  <h2>无序列表</h2>
+<h3>你最喜欢吃的水果</h3>
+<ul>
+        <li>
+             <ul>
+                     <li>1</li>                               <!--无序列表的嵌套可以生成二级列表-->
+                     <li>2</li>
+                     <li>3</li>
+                     <li>4</li>
+                     <li>5</li>
+             </ul>                                         <!-- ul>li{$}*5 快速生成命令法-->
+            <h1><img src="" />苹果</h1>
+        </li>
+<li>香蕉</li>
+<li>橘子</li>
+</ul>
+<!-- 1.ul标签里只能放li标签
+2.li标签里可以容纳所有元素：<li>
+                                <h4>水果蔬菜</h4>
+                                 <p>西红柿</p>
+                            </li>
+3.无排列顺序 -->
+<hr>
+
+<h2>有序列表</h2>
+<ol type="a">
+        <li value="3">美国</li><!--type设置有序列表表头类型，value设置值，简单说从第几个类型开始-->
+        <li>英国</li>
+        <li value="8">中国</li>
+        <li>俄罗斯</li>
+</ol>
+<!-- 将所给文字进行排序，会自动带出编号 -->
+<hr>
+
+<h2>自定义列表</h2>
+<dl>
+        <dt>定义标题</dt>
+        <dd>定义描述。解释</dd>
+        <dd>定义描述。解释</dd>
+        <dd>定义描述。解释</dd>
+</dl>
+<!-- 其中，dt为标题，下面的dd则为dt内容的解释描述。 -->
+</body>
+</html>

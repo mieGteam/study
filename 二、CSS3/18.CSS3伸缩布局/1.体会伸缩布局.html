@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    section {
+        width: 80%;
+        height: 200px;
+        border: 1px solid pink;
+        margin: 100px auto;
+    }
+    section div {
+        width: 33.33%;
+        height: 100%;
+        float: left;
+        /* margin: 0 5px;容易出问题，会影响盒子大小，使子盒子掉下来 */
+    }
+    section div:nth-child(1){
+        background-color: pink;
+    }
+    section div:nth-child(2){
+        background-color: purple;
+    }
+    section div:nth-child(3){
+        background-color: pink;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>

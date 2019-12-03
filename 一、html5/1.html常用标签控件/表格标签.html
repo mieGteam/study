@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格标签</title>
+</head>
+
+<body>
+
+    <h3>表格标签</h3>
+    <table>
+        <!--表格标签-->
+        <tr>
+            <!--行标签-->
+            <td>姓名</td>
+            <!--单元格标签-->
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>刘德华</td>
+            <td>男</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>张学友</td>
+            <td>男</td>
+            <td>55</td>
+        </tr>
+    </table>
+    <!-- table标签里只能放tr标签，tr里只能放td标签，td里可以放任何标签 -->
+    <hr>
+
+
+    <h3>表格属性</h3>
+    <strong>
+        边框宽度（=0默认无边框） <br>
+        cellspacing：单元格之间的空白间距（默认2像素）<br>
+        cellpadding:单元格和字体之间的距离（默认1像素）<br>
+        width:表格宽度
+        height:表格高度
+        align:设置表格在网页中的水平对其方式
+    </strong>
+    <table border="1" cellspacing="0" cellpadding="5" align="center">
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>刘德华</td>
+            <td>男</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>张学友</td>
+            <td>男</td>
+            <td>55</td>
+        </tr>
+    </table>
+    <hr>
+
+
+    <h3>表头标签</h3>
+    将表头文字中的td改为th，成为表头标签
+    <table>
+        <tr>
+            <th>姓名</th>
+            <!--将td改为th-->
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>刘德华</td>
+            <td>男</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>张学友</td>
+            <td>男</td>
+            <td>55</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h3>表头和表身的另一种写法</h3>
+    表头和表身的另一种写法：thead和tbody
+    <table>
+
+        <thead>
+            <!--thead标签，表示内容为表头-->
+            <tr>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>年龄</td>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <!--tbody标签，表示内容为表身-->
+            <tr>
+                <td>刘德华</td>
+                <td>男</td>
+                <td>56</td>
+            </tr>
+            <tr>
+                <td>张学友</td>
+                <td>男</td>
+                <td>55</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+
+    <h3>表格标题</h3>
+    表格标题caption写在table里，作为表格的一部分
+    <table border="1">
+        <caption>火影忍者演员表</caption>
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>刘德华</td>
+            <td>男</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>张学友</td>
+            <td>男</td>
+            <td>55</td>
+        </tr>
+    </table>
+    <hr>
+例子：
+    <h3>表脚tfoot</h3>
+    <table farme="hsides" rules="rows">          <!--hsides来控制表格最外层边框
+                                                        rules来设置单元格之间的分隔线-->
+        <caption>标题</caption>
+        <thead>                    
+            <tr>
+                <td>表头1</td>
+                <td>表头2</td>
+                <td>表头3</td>
+            </tr>
+        </thead>
+       
+        <tbody>
+            <tr>
+                <td>表身1</td>
+                <td>表身2</td>
+                <td>表身3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>表脚1</td>
+                <td>表脚2</td>
+                <td>表脚2</td>
+            </tr>
+        </tfoot>
+    </table>                                      
+
+    table>caption+(thead>tr>td{表头$}*3)+tbody>tr>td{$}*3
+     <!--一个嵌套用（）括起来，同级用"+"，次级用">"-->
+
+
+    <h3>合并单元格</h3>
+    跨行合并（竖着合并）：rowspan
+    跨列合并（横着合并）：colspan
+    <!--删除合并过程中被合并的元素，然后再剩下那个的代码中打入合并代码-->
+    <table border="1">
+        <caption>火影忍者演员表</caption>
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>刘德华</td>
+            <td rowspan="2">男</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>张学友</td>
+
+            <td>55</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+1.一级大于一级，数位之间没有进制，级别之间不可超越
+*2.继承来的属性权重为0
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .daohanglan {/*0,0,1,0 是nav的，不是li的*/
+        color: red;
+    }
+    li { /*0,0,0,1*/
+        color: pink;
+    }
+    </style>
+</head>
+<body>
+    <nav class="daohanglan">
+        <ul>
+            <li>继承来的属性权重为0</li>
+        </ul>
+    </nav>
+</body>
+</html>

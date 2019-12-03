@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        height: 30px;
+        border: 1px solid red;
+        padding-left: 20px;/*因为这个盒子没有宽度，所以padding不会影响盒子的宽度*/
+        padding-top: 10px;
+        /*width:100%;*/
+    }
+    nav {
+        width: 300px;
+        height: 40px;
+        border: 1px solid pink;
+    }
+    p {/*因为p没有指定宽度，则会默认和父亲一样宽，适用于块级元素*/
+        height: 20px;
+        background-color: hotpink;
+        padding-left: 30px;/*此时padding值也不会影响盒子的宽度/高度*/
+    }
+    </style>
+</head>
+<body>
+    <div>奔跑吧，兄弟</div>
+    <nav>
+        <p>摔跤吧，爸爸</p>
+    </nav>
+    <!-- 1.宽度属性width和高度属性height仅适用于块级元素，对行内元素无效（img和input除外）
+    2.计算盒子模型的总高度时，还应考虑上下两个盒子垂直外边距合并的情况。
+    **3.如果是一个盒子没有给定宽度/高度或者继承父亲的宽度/高度，则padding不会影响本盒子大小** -->
+</body>
+</html>

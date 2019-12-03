@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 300px;
+        height: 50px;
+        /* background: liner-gradient(渐变的起始位置，起始颜色，结束颜色) */
+        background: -webkit-linear-gradient(top, red,green);
+        background: -o-linear-gradient(top, red,green);
+        background: -moz-linear-gradient(top, red,green);
+        background: linear-gradient(top, red,green);/*为了照顾其他浏览器的兼容性*/
+        /* 因为背景渐变兼容性问题很严重，必须在前面添加浏览器的私有前缀 */
+        margin: 200px auto;
+}
+    section{
+         /* background: -webkit-linear-gradient(渐变起始位置，颜色 位置，颜色位置。。。); */
+         background: -webkit-linear-gradient(top,red 0%,green 20%, blue 80%);
+         width: 400px;
+         height: 100px;
+         margin:0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <section></section>
+</body>
+</html>

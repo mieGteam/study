@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* transform: translate(100px);水平移动100px */
+        /* transform: translate(50%);/*translate移动距离 如果是 % */
+        /* 不是以父级宽度为准，以自己的宽度为准，意思就是走div盒子自己宽度 200的一半100px的距离*/ 
+
+        /* 以前我们让定位的盒子居中对齐 */
+        position: absolute;
+        left: 50%;/*以父级宽度为准*/
+        top: 50%;
+        /* margin-left: -100px;这个需要计算，不合适 */
+        transform: translate(-50%, -50%);
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

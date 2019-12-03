@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+    div:nth-child(2){
+        background-color: purple;
+        position: relative;
+        left: 100px;
+        top: 110px;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div>2</div>
+    <div></div>
+    <!-- 1.它可以通过边偏移移动位置，但是原来的位置继续占有
+    2.其次每次移动的位置都是以自己的左上角为基点移动（相对于自己来移动位置）
+    就是说相对定位的盒子仍在标准流中，它后面的盒子仍以标准流的方式对待它（相对定位不脱标） 
+    如果说浮动的目的是要让多个块级元素排列到一行上去，那相对定位就是让盒子到我们想要的地方去-->
+</body>
+</html>

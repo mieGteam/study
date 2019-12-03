@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    	@font-face {  /* 1.电脑中没有的字体，我们需要声明,直接复制 */
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?7kkyc2');/*注意引入路径的问题*/
+  src:  url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+span {
+    font-family: "icomoon";/*2.给盒子添加字体，名字要和上面声明的字体名字（font-family）一样*/
+    font-size: 100px;
+    color: pink;
+}
+div::before {
+    font-family: "icomoon";/*2.给盒子添加字体，名字要和上面声明的字体名字（font-family）一样*/
+    font-size: 100px;
+    color: hotpink;
+    content: "\e91b";/*3.盒子里面添加结构*/
+}
+    </style>
+</head>
+<body>
+    <span></span>
+    <span></span>
+    <div></div>
+</body>
+</html>

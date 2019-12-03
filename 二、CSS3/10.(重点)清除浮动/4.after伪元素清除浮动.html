@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .father {
+            border: 1px solid red;
+        }
+
+        .damao {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+
+        .ermao {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            float: left;
+        }
+
+        .xiaomi {
+            width: 300px;
+            height: 120px;
+            background-color: black;
+        }
+        /* p:after {
+            content:"456";
+        } */
+        .clearfix:after {
+            display: block;/*1.转化为块级元素*/
+            content: ".";/*2.content 内容为小点，尽量不要空，否则旧版本浏览器有空隙*/
+            height: 0;/*3.高度为0，防止盒子被撑开*/
+            visibility: hidden;/*4.隐藏盒子*/
+            clear: both;/*5.清除浮动*/
+            /* 缺点：代码量太大 */
+        }
+        .clerarfix { /*ie6,7浏览器的处理方式*/
+            *zoom: 1;/*  *代表ie6,7能识别的特殊符号，带有这个*的属性 只有ie6，7才能执行
+            zoom就是ie6，7清除浮动的方法*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 空元素的升级版 -->
+    <p>123</p>
+    <div class="father clearfix">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+
+    </div>
+    <div class="xiaomi"></div>
+</body>
+
+</html>

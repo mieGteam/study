@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        color: red!important;
+    }
+    /* :first-child = div[style] */
+    </style>
+</head>
+<body>
+    <div>123</div>
+</body>
+</html>
+
+优先级总结：
+1.使用了important声明的规则
+2.内嵌在HTML元素的style属性里面的声明
+3.使用了ID选择器的规则
+4.使用了类选择器、属性选择器、伪元素和伪类选择器的规则
+5.使用了元素选择器的规则
+6.只包含一个通配符选择器的规则
+7.同一类选择器则遵循就近原则

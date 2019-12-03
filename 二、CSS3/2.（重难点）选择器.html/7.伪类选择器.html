@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    a:link {
+        font-size: 14px;
+        color:black;
+        font-weight: bold;
+    }
+    a:visited {
+        font-size: 14px;
+        color:orange;
+        font-weight: bold;
+    }
+    a:hover {
+        font-size: 14px;
+        color:red;
+        font-weight: bold;
+    }
+    a:active {
+        font-size: 14px;
+        color:green;
+        font-weight: bold;
+    }     /*顺序按着 lvha的顺序来写
+            love  hate记忆法
+             lv包包非常hao记忆法*/
+    </style>
+</head>
+<body>
+    伪类选择器中的   链接伪类选择器
+    主要针对于  a
+    1.：link   未访问的链接
+    2.：visited  已访问的链接
+    3.：hover   鼠标经过的状态
+    4.：active  选定的链接,鼠标点击不放开的颜色
+    <div><a href="#">秒杀</a>
+         <a href="#">闪购</a></div>
+</body>
+</html>
+<hr>
+
+
+
+
+实际工作中一般只用的到hover
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {  /*a是标签选择器，表示所有的链接*/
+            font-weight: 700;
+            font-size: 16px;
+            color:gray;  
+        }
+        a:hover{/*hover是链接伪类选择器  鼠标经过*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">秒杀</a>
+</body>
+</html>
