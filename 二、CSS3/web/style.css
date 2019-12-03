@@ -1,0 +1,385 @@
+/* CSS初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    content: "";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 集体声明 */
+a {
+    color: #e2e4ed;
+    text-decoration: none;
+}
+body {
+    box-sizing: border-box;
+}
+/* 头部开始 */
+header {
+    width: 100%;
+    height: 58px;
+    background-color: #191d3a;
+    overflow: hidden;
+}
+ section {
+     width: 1000px;
+     height: 58px;
+     margin: 0 auto;
+     /* background-color: pink; */
+ }
+ .logo{
+     margin: 12px 80px 0 30px;
+     float: left;
+     
+ }
+ .navbar a {
+     /* cursor: pointer; */
+     display:inline-block;
+     float: left;
+     /* border: 1px solid #000; */
+     height: 58px;
+     width: 85px;
+     text-align: center;
+     color: #818496;
+     line-height: 58px;
+     border-left: 1px solid #252947;
+     border-right: 1px solid #252947;
+     
+ }
+ .navbar .first:first-child{
+     background-color: rgb(37, 41, 71);
+     color: rgb(226, 228, 237);
+ }
+nav {
+    width: 1250px;
+    height: 35px;
+    /* background-color: purple; */
+    margin: 10px auto;
+   
+}
+/* .navbar a:visited {
+    color:rgb(226,228,237);
+    background-color: rgb(37,41,71); */
+
+.navbar a:hover {
+    color:rgb(226,228,237);
+    background-color: rgb(37,41,71);
+
+}
+/* .navbar a:active {
+    color:rgb(226,228,237);
+    background-color: rgb(37,41,71); */
+
+.navbar .join {
+    display: inline-block;
+    margin: 14px 10px;
+    height: 30px;
+    width: 96px;
+    border-radius: 3px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 32px;
+    background-color: #38b774;
+    border: 1px solid #3aca7a;
+    transition: background-color  0.5s;
+
+}
+.navbar .join:hover{
+    background-color: rgb(43,163,100);
+}
+/* 中英部分 */
+section .la {
+    display: inline-block;
+    float: right;
+    width: 80px;
+    height: 58px;
+    line-height: 58px;
+}
+section .la .chinese{
+    margin-right: 10px;
+    color: #38b774;
+}
+/* 轮播图部分 */
+ .picture li{
+    width: 100%;
+    height: 460px;
+}
+.space {
+    position: relative;
+}
+.space ul{
+    color: rgb(127,222,190);
+    width: 135px;
+    height: 13px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    bottom: 30px;
+}
+
+.space ul li{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(127,222,190);
+    float: left;
+    margin-right: 15px;
+}
+.space ul li:first-child{
+    background-color: #fff;
+}
+.picture li:nth-child(1){
+    background: url(images/banner1.jpg) center no-repeat;
+}
+/* 主体部分 */
+.main{
+    width: 100%;
+    height: 643px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    padding-bottom: 57px;
+}
+}
+.main .hd {
+    width: 1000px;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+div .active{
+    width: 1000px;
+    height: 248px;
+    /* background-color: purple; */
+    margin: 0 auto;
+    padding-top: 50px;
+}
+div .active img{
+    display: block;
+    vertical-align: top;
+}
+div .active a{
+    text-decoration: none;
+    outline: none;
+    padding-right: 42px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    transition: color, backgorund-color 1s;
+}
+div .active a:hover h5{
+    background-color: #38b774;
+    color: #fff;
+    transition: all 1s;
+}
+div .active a:hover p{
+    background-color: #38b774;
+    color: #fff;
+    transition: all 1s;
+}
+.active a h5{ 
+    font-size: 18px;
+    color: black;
+    padding: 5px 0 10px;
+}
+.active a p{ 
+    font-size: 14px;
+    color: #38b774;
+    padding: 5px 0 10px 0;
+}
+div .active a:last-child{
+    padding-right: 0;
+}
+/* 板块部分 */
+.body{
+    width: 1000px;
+    height: 310px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    position: relative;
+}
+.body .kit{
+    display: inline-block;
+    width: 284px;
+    height: 80px;
+    margin-top: 22px;
+    background: url(images/bynews.jpg) no-repeat;
+    padding: 40px 216px 0 0 ;
+    position: relative;
+    /* background-color: pink; */
+}
+.body .more1{
+    display: inline-block;
+    height: 28px;
+    width: 66px;
+    text-align: center;
+    line-height: 28px;
+    background-color: #fff;
+    border: 1px solid rgb(48,188,115);
+    color: rgb(48,188,115);
+    border-radius: 5px;
+    position: absolute;
+    top: 42px;
+    right: 195px;
+    transition: all 1s;
+}
+.body .more1:hover {
+    background-color: #38b774;
+    color: #fff;
+}
+.body ul li{
+    padding: 12px 0;
+    width: 475px;
+    border-bottom: 1px solid #ccc;
+}
+.body ul li span{
+    margin-left: 18px;
+    color: #afbecf;
+    font-size: 12px;
+    float: right;
+}
+/* 招聘部分 */
+.zp{
+    display: inline-block;
+    /* float: right; */
+    width: 500px;
+    height: 310px;
+    position: absolute;
+    right: 0;
+    top: 22px;
+}
+.zp h2{
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    position: absolute;
+    top: 30px;
+    left: 75px;
+}
+.zp p{
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 70px;
+    left: 78px ;
+}
+.zp .more{
+    display: inline-block;
+    height: 28px;
+    width: 66px;
+    text-align: center;
+    line-height: 28px;
+    background-color: rgb(58,192,121);
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    left: 215px;
+    transition: all 1s;
+}
+.zp .more:hover {
+    background-color: #fff;
+    color: #38b774;
+}
+.zp .bt{
+    color: #fff;
+    font-weight: bold;
+    font-size:14px;
+    position: absolute;
+    top: 110px;
+    left: 20px;
+}
+.zp ul{
+    font-size: 14px;
+    width: 305px;
+    font-weight: 500;
+    padding: 0 175px 0 20px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    border-width: 305px;
+    color: #fff;
+    /* overflow: hidden; */
+}
+.zp ul li{
+    width: 130px;
+    padding-right: 180px;
+}
+/* 页脚部分 */
+footer {
+    background-color: #191d3a;
+    width: 100%;
+    height: 190px;
+}
+footer .area{
+    width: 1000px;
+    height: 150px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+footer .area .fl {
+    text-decoration: none;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    /* background-color: blue; */
+}
+footer .area .fl a{
+    font-size: 12px;
+    color: #6c6e7e;
+    padding: 0 10px;
+    border-right: 1px solid #6c6e7e
+}
+footer .area .fl a:hover {
+    color: #fff;
+}
+footer p{
+    font-size: 12px;
+    color: #6c6e7e;
+    padding: 17px 10px;
+
+}
+footer div {
+    font-size: 12px;
+    color: #6c6e7e;
+    padding: 17px 10px;
+}
+/* 回到顶部部分 */
+.top{
+    display: block;
+    position: fixed;
+    right: 15px;
+    bottom: 75px;
+    width: 68px;
+    height: 29px;
+    background: url(images/top.png) no-repeat 0 -40px;
+    z-index:999
+}
+.top a{
+    display: block;
+    width: 68px;
+    height: 29px;
+    /* background-color: pink; */
+}
+.top a:hover{
+    background: url(images/top.png) no-repeat 0 0px;
+}

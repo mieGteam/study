@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 如果子盒子脱标后，父盒子又没有给高度，那么就会出现子盒子累起来，父盒子高度变成0。 */
+    
+    
+    .father { /*子盒子是标准流，父盒子虽然没有高度，但是会被子盒子撑开*/
+        border: 1px solid red;
+        /* height: 100px;很多情况下，我们不方便给父盒子高度，比如新闻，你不知道新闻有多少个字。
+        一般情况下，让里面的内容自动撑开盒子，不要写死高度。 */
+    }
+    .damao {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+    }
+    .ermao {
+        width: 150px;
+        height: 100px;
+        background-color: purple;
+        float: left;
+    }
+    .xiaomi {
+        width: 300px;
+        height: 120px;
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="xiaomi"></div>
+
+    clear：清除浮动
+    1.left 清除左侧浮动
+    2.right 清除右侧浮动
+    3.both  清除左右两侧的浮动
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 100px;
+        background-color: pink;
+        margin-left: auto;
+        margin-right: auto;/*左右自动  auto  盒子可以水平居中对齐*/
+        text-align: center;/*文字水平居中*/
+        /*vertical-align: middle;对于块级元素无效*/
+
+    }
+    img { /*行内块元素*/
+        /*vertical-align: baseline;默认的基线对齐*/
+        vertical-align: middle;/*手动改为中线对齐*/
+    }
+    textarea {
+        height: 300px;
+        width: 300px;
+        vertical-align: middle;
+    }
+    </style>
+</head>
+<body>
+    <div>文字居中</div>
+    <!-- 1.底线对齐 bottom line 
+    2.基线对齐 base line
+    3.中线对齐 middle line
+    4.顶线对齐 top line
+    vertical-align 不影响块级元素中的内容对齐，它只针对于行内元素或者行内块元素，特别是行内块元素
+    **通常来控制图片/表单与文字的对齐** -->
+    <hr>
+    <img src="images/2.jpg" alt="">我好尴尬呀
+    <!-- 图片和文字默认的是基线对齐，但是我们想要中线对齐 -->
+    <hr>
+    用户留言<textarea></textarea>
+</body>
+</html>

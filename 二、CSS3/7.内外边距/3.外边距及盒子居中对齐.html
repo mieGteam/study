@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* margin-top: 100px;/*上面的外边距是100px
+        margin-left: 50px;左面的外边距是100px */
+        margin: 30px auto;/*上下是30px，左右auto，这样可以使块级带有宽度的盒子水平居中对齐*/
+        padding: 4px;/*顺序与内边距相同*/
+    }
+    header {
+        width: 900px;
+        height: 120px;
+        background-color: black;
+        margin: 0 auto; /*左右一定是auto，就可以居中*/
+    }
+    span {
+        width: 900px;
+        height: 120px;
+        background-color: black;
+        margin: 0 auto;
+    }    /* 行内元素是无效的 */
+    </style>
+</head>
+<body>
+    <div></div>
+    <!-- 外边距可以实现盒子居中
+    1.必须是块级元素
+    2.盒子必须指定了宽度width
+    3.**左右的外边距设置auto**，就可实现盒子水平居中 -->
+    <header>头部标签</header>
+    <span>123</span>
+</body>
+</html>

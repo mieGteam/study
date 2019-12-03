@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li {/*0,0,0,1*/
+        color: red;
+    }
+    ul li { /*ul 0,0,0,1
+            li 0,0,0,1
+            叠加：0,0,0,2*/
+        color: green;
+    }
+    nav ul li {/*叠加后变成了0,0,0,3*/
+        color: blue;
+    }
+    .daohang ul li {
+        color: pink;
+    }
+    </style>
+</head>
+<body>
+    <nav class="daohang">
+        <ul>
+            <li>李白</li>
+            <li>程咬金</li>
+            <li>鲁班一号</li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+.nav ul li：0,0,1,2
+<!-- a:hover :0,0,1,1 
+a:0,0,0,1
+:hover 0,0,1,0-->
+#nav p: 0,1,0,1

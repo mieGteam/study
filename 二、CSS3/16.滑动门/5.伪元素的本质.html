@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* .one 类选择器    ：hover 伪类选择器   ::伪元素选择器 */
+    div::before {
+        content:"楚乔";
+        background-color: pink;
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        /* 类选择器，伪类选择器 就是选取对象，伪元素选择器本质上是插入一个元素（标签/盒子）只不过是行内元素，相当于span  a */
+    }
+    div::after {
+        content: "宇文玥的";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid blue;
+    }
+    </style>
+</head>
+<body>
+        <!-- HTML中没有对应的元素，但是所有用法和表现行为和真正页面元素一样 -->
+        <div>是</div>
+</body>
+</html>

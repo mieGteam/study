@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            /* background-color: pink; */
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+    img {
+        /* margin: 200px; */
+        transition: all 0.6s;
+        transform-origin: 20px 30px;/*bottom right右下角或者精确px等，默认为center center*/
+    }
+    div:hover img {
+        transform: rotate(360deg);
+    }
+    </style>
+</head>
+<body>
+   <div><img src="images/pk1.png" width=200px alt=""></div> 
+</body>
+</html>

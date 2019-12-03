@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!--后代选择器
+    有大量元素时，通常用于筛选,一直找到最里层
+    .class h3   类别选择器 标记选择器-->
+    <style>
+    div ul{
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </p>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- 并集选择器 样式相同，或部分相同
+        .class,h3   类别选择器，标记选择器
+        ，隔开，所有选择器都会执行后面样式，通常用于集体声明-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .h1, .strong {
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </p>
+        <span>我是一个span</span>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h1>这是一个标题</h1>
+    <strong>这是一个加粗文字</strong>
+</body>
+</html>
+
+<!-- 交集选择器
+标记选择器.class选择器 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li.list{ /*标签.类名*/
+        color:blue
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <ul>
+                <li class="list">1</li>
+                <li class="list">2</li>
+            </ul>
+        </p>
+        <span class="list">我是一个span</span>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h1>这是一个标题</h1>
+    <strong>这是一个加粗文字</strong>
+</body>
+</html>
+
+
+
+<!-- 子元素选择器 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .item li{
+        color: red;
+        }
+        .item > li{
+        color:green;
+    }
+    </style>
+</head>
+<body>
+    <ul class="item">
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   我们学了三个域：
+<ol>
+    <li>文本域  textarea   留言的</li>
+    <li>文件域  input type="file"  上传文件的</li>
+    <li>表单域  form    收集表单控件信息，并且提交的</li>
+</ol>
+  
+
+   <h2>表单域</h2>
+   <form>
+       <p>用户名：<input type="text"></p>
+       <p>密&nbsp;码：<input type="password"></p>
+
+       <input type="submit" value="提交">
+       <input type="reset" value="重置">
+   </form>
+   <hr>
+
+   <h2>form的三个属性</h2>
+   <h2>表单域</h2>
+   <form action="demo.php" method="GET">
+       <!--action表示将数据传输于哪里method表示传输方式-->
+       <p>用户名：<input type="text" name="username"></p>
+       <p>密&nbsp;码：<input type="password" name="pwd"></p>
+
+       <input type="submit" value="提交">
+       <input type="reset" value="重置">
+   </form>
+   <ol>
+<li>get 速度快，但是会显示表单里的内容，不安全，不能做密码提交</li>
+<li>post 速度慢一些，但是不会显示表单内容，比较安全</li>
+   </ol>
+<hr>
+区别网页很多的form时，用name区别
+<form action="" method=""name="login"></form>
+<hr>
+
+
+<form action="" method="GET">
+    <!-- action表示表单数据的处理程序的url地址，如果为空，则为当前文档的url地址
+    get：会将表单内容附加在url地址后面，所以限制了内容长度，不超过8192个字符，且不具有保密性
+    post：将表单数据一并包含在表单主体中，一起传送到服务器中处理，没有数据大小限制 -->
+    <p>用户名：<input type="text" name="username"></p>
+    <p>密码：<input type="password" name="password"></p>
+
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
+</form>
+</body>
+</html>

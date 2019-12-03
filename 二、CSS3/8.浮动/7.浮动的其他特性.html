@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        height: 200px;
+        background-color: pink;
+        float: left;/*如果块级元素添加浮动后，具有行内块元素的特性*/
+    }
+    span {
+        background-color: purple;
+        height: 100px; 
+        float: left;/*行内元素添加浮动后，也具有行内块元素的特性*/
+        /* 行内块的特性：何以一行放多个，有宽度和高度，盒子的大小根据内容决定的 */
+    }
+    </style>
+</head>
+<body>
+    <div>三大傻大闹宝莱坞</div>
+    <div>三大傻大闹宝莱坞</div>
+    <span>额的个神啊</span>
+    <span>额的个神啊</span>
+
+    <!-- 浮动总结： -->
+    <!-- 浮动的目的就是为了让多个块级元素在同一行上显示 -->
+    <!-- 1.浮：加了浮动元素的盒子是浮起来的，漂浮在其他盒子上面 -->
+    <!-- 2.漏：加了浮动元素的盒子是不占位置的，标准流的盒子会占用它的位置 -->
+    <!-- 3.特：浮动的盒子需要跟标准流的父级盒子搭配使用，其次浮动盒子会体现行内块元素的特性 -->
+</body>
+</html>

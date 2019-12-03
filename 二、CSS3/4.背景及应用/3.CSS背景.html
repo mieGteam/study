@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 400px;
+        height: 500px;
+        background-color: pink;  /*背景颜色*/
+        background-image: url(images/l.jpg);  /*背景图片*/
+        background-repeat: no-repeat;/*不平铺*/
+                            /* background-repeat: repeat-x;横向平铺
+                            background-repeat:repeat-y;纵向平铺 */
+    }
+    </style>
+</head>
+<body>
+    <div>
+
+
+    </div>
+</body>
+</html>
+
+
+
+<h1>背景位置一</h1>
+<!-- 1.利用方位名词 top bottom来更改背景图片位置 -->
+<!-- 两个值：length
+        position -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        background-position: left top;/*默认左上角*/
+    }               /*left top/bottom   左上左下
+                    right top/bottom  右上右下
+                    center center    水平居中
+                    顺序没有影响
+                    如果方位名词只写一个，另外一个默认为center*/
+    </style>
+</head>
+<body>
+    <div>
+
+
+    </div>
+</body>
+</html>
+
+
+<hr>
+
+<h1>背景位置二</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        background-position: 10px 30px;
+        /* 2.精确单位：第一个一定是X坐标，第二个一定是Y坐标 */
+    }   
+    span{
+        background-position: 30px center;
+    }
+       /* 3.混搭使用 */
+    </style>
+</head>
+<body>
+    <div>
+
+
+    </div>
+    <span>
+
+        
+    </span>
+</body>
+</html>

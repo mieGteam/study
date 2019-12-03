@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * { /*清空默认的内外边框，几乎是我们写CSS必须写的*/
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none; /*取消列表自带的小点，取消默认的列表样式*/
+    }
+    .searchPic {
+        width: 238px;
+        height: 294px;
+        border: 1px solid #d9e0ee;
+        border-top: 3px solid #ff8400;/*这句话要放在border的下面，就近原则*/
+        margin: 100px;
+    }
+    .searchPic h3 {
+        height: 35px;
+        border-bottom: 1px solid #d9e0ee;
+        font-size: 16px;
+        font-weight: normal; /*让粗体不变粗*/
+        line-height: 35px;/*行高等于高度，可以让文字垂直居中*/
+        padding-left: 12px;/*用margin的话，下边框线会跟着走，留个空
+                            因为h3没有设置宽度，继承父亲的宽度，所以padding不会影响盒子大小*/
+    }
+    .searchPic img {
+        margin: 7px 0 0 8px; /*上 右 下 左*/
+    }
+    .searchPic ul li a {
+        font-size: 12px;
+        color: #666666;
+        text-decoration: none;/*取消下划线*/
+    }
+    </style>
+</head>
+<body>
+    <div class="searchPic">
+        <h3>搜索趣图</h3>
+        <img src="../../盒子模型.png" height="160px" width="218px">
+        <ul>
+            <li><a href="#">GIF:小胖墩游泳被卡，被救后一脸无辜</a></li>
+            <li><a href="#">GIF:小胖墩游泳被卡，被救后一脸无辜</a></li>
+            <li><a href="#">GIF:小胖墩游泳被卡，被救后一脸无辜</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 310px;
+        height: 190px;
+        border: 1px solid #cccccc;
+        margin :50px auto;
+        padding: 10px;/*padding会撑开盒子*/
+        position: relative;/*根据子绝父相最合适*/
+    }
+    .topicon {
+        position:absolute;/*绝对定位，不占位置*/
+        top: 0;
+        left: 0; /*孩子加了绝对定位，如果父级没有定位，以浏览器为准*/
+    }
+    .bottomicon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    </style>
+</head>
+<body>
+    <div><img src="images/top_tu.gif" alt="" class="topicon">
+        <img src="images/adv.jpg" alt="">
+        <img src="images/br.gif" alt="" class="bottomicon">
+    
+    </div>
+    
+</body>
+</html>
