@@ -11,12 +11,12 @@
         var a = null
         var b; //默认值是undefined
 
-        console.log(Boolean(str)) //ture
+        console.log(Boolean(str)) //ture  括号里面是变量，会参加运算 隐式转换
         console.log(Boolean(num)) //true
         console.log(Boolean(a))   //false
         console.log(Boolean(b))   //false
 
-        // 转换成false的情况： null undefined  ''空字符串  0  NaN
+        // 转换成false的情况： null undefined  ''空字符串  0  NaN 参加运算的时候才会转化为false或者true
     </script>
 </head>
 <body>
