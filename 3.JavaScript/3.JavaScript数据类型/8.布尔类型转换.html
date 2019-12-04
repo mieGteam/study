@@ -6,7 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-   
+        var str ='abc'
+        var num = 123
+        var a = null
+        var b; //默认值是undefined
+
+        console.log(Boolean(str)) //ture
+        console.log(Boolean(num)) //true
+        console.log(Boolean(a))   //false
+        console.log(Boolean(b))   //false
+
+        // 转换成false的情况： null undefined  ''空字符串  0  NaN
     </script>
 </head>
 <body>
