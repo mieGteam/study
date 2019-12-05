@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //语法错误
+    // for(var i = 0 , i <=100;i++){
+
+    // }  ,改为;就ok
+
+
+    // 逻辑错误
+    var sum = 0;
+    for (i = 1 ; i<=100;i++){
+         sum += i
+         //过去调试的方式，通过输出的值，观察是否符合我们的期望
+        //  alert(sum)//alert不方便，循环次数多时，需要重新打开网页
+        // console.log(sum);
+        
+
+        // 现在的调试
+        // 断点调试，用浏览器打开后F12，控制台里的sources
+    }
+    console.log(sum);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

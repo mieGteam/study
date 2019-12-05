@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //求1-100之间所有数的和
+    // var sum = 0
+    // for(var i = 1 ; i<=100;i++){
+    //     sum+=i
+    // }console.log(sum)
+   
+
+    //求1-100之间所有数的平均值
+        // var sum = 0 
+        // var avg
+        // for (var i = 1; i<=100;i++){
+        //     sum+=i
+        // }
+        // avg=sum/100
+        // console.log(avg)
+
+
+
+    //求1-100之间所有偶数的和
+    // var sum = 0
+    // for (var i = 1; i <=100;i++){
+    //     //找到偶数
+    //     if (i%2===0){
+    //         sum+=i
+    //     }
+    // }
+    // console.log(sum)
+
+
+
+    //同时求1-100之间所有偶数和奇数的和
+    var oddsum = 0 //奇数的和
+    var evensum = 0 //偶数的和
+    for (var i = 1;i<=100;i++){
+        if(i%2===0){
+            evensum+=i
+        }else {oddsum+=i}
+    }console.log('奇数的和:'+oddsum)
+    console.log('偶数的和：'+evensum)
+    </script>
+</head>
+<body>
+    <!-- while和do..while一般用来解决无法确定次数的循环 -->
+</body>
+</html>
