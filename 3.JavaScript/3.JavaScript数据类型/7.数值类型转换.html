@@ -23,6 +23,20 @@
 // var str = '123'
 // var isRight = false;
 
+
+
+
+
+// 可以接受两个参数，1.要转化的变量或者数字（必须）
+//                  2.进制               （可选）  若有，就会以该进制来计算前面的变量或值
+console.log(parseInt(11.12,2))//参数以，隔开
+
+
+
+console.log(parseInt('0123'))
+// 以不是0的数字开始，到不是数字结尾，会截取
+
+
 // console.log(parseInt(str));
 // // parseInt无法把布尔类型转换成数值类型 返回的结果是NAN
 // console.log(parseInt(isRight));
@@ -76,6 +90,8 @@ var str = '123abc'
 
     console.log(str+0) //+执行的是拼接
     // + 如果一边是数值类型，一边是字符串，会先把数值类型转换成字符串，再进行字符串的拼接
+
+
 </script>
 
 </head>

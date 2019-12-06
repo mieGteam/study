@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 5.冒泡排序，从小到大
+    var numbers = [97,68,72,29,51,45]
+    // 外层循环控制趟数，每一趟找到一个最大值
+    for(var i = 0;i<numbers.length-1;i++){
+        // 内层循环：控制比较的次数，并且判断两个数的大小，把大的数往后移
+        for(var j = 0;j<numbers.length-1-i;j++){
+            // 两两比较，从小到大排序
+            if(numbers[j]>numbers[j+1]){
+                  // 交换位置
+            var tmp = numbers[j]
+            numbers[j]=numbers[j+1]
+            numbers[j+1]=tmp
+            }
+          
+        }
+    }
+    console.log(numbers)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 在调用函数时，可以向其传递值，这些值被称为参数 -->
+    function fun(形参1，形参2...){ //函数声明
+        alert("函数使用")
+    }
+
+    fun(实参1，实参2...);  //函数调用
+    <!-- 实参1把值传递给形参1，实参2把值传递给形参2 -->
+    <script>
+    function fun(num1,num2){ //形式上的参数，简称形参1，形参2
+    // 形参看作是变量就好了
+        console.log(num1+num2)
+    }
+    fun(1,2) //函数不调用，自己不执行   1,2他们是实际参数，简称实参
+    fun(123,456)  //传递不同参数就有不同结果
+    </script>
+</body>
+</html>

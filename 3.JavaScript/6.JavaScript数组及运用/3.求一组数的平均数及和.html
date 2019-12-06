@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // // 1.求一组数中的所有数的平均值及和
+    // var numbers = [35,12,35,90,11,12]
+    // // 和
+    // var sum = 0
+    // // 平均值
+    // var avg
+    // // 遍历数组
+    // for (var i = 0;i<numbers.length;i++){
+    //     sum += numbers[i]
+    // }
+    // avg = sum / numbers.length
+    // consolel.log('这组数的和:'+sum)
+    // consolel.log('这组数的平均值:'+avg)
+
+
+
+    // 2.求一组数中的最大值和最小值，以及所在位置(最大值和最小值在这组数中的位置)
+
+    // 求一组数中的最大值
+    var numbers = [65,13,88,10,25]
+    //     // 假设数组中的第一个数是最大值
+    // var max = numbers[0];
+    // for(var i = 1;i<numbers.length;i++){
+    //     if(max<numbers[i]){
+    //         max = numbers[i]
+    //     }
+    // }
+    // console.log(max);
+
+    var max = numbers [0]
+    var min = numbers [0]
+        // 最大值的索引
+    var maxIndex = 0
+    // 最小值的索引
+    var minIndex = 0
+    for (var i = 1;i < numbers.length;i++){
+        // 找大的数
+        if (max < numbers[i]){
+            max = numbers[i]
+            maxIndex = i 
+        }
+     // 找小的数
+        if (min>numbers[i]){
+            min = numbers[i]
+            minIndex = i
+        }
+    }
+       
+        console.log(max,min)
+        console.log(maxIndex,minIndex)
+    
+    </script>
+    
+</body>
+</html>

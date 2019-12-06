@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 将字符串数组用|或其他符号分隔
+        var names = ['郭德纲','郭麒麟','于谦','岳云鹏','烧饼']
+        // 往元素后面加分隔符
+        // var seperator = '|'
+        // var str = ''
+        // for (var i = 0; i < names.length;i++){
+        //     str =str +names[i]+seperator
+        // }
+        // console.log(str);
+
+
+        // 分隔符
+        var seperator = '|'
+        var str = names [0]
+        for(var i = 1 ;i<names.length;i++){
+            str =str+ seperator + names[i]
+        }
+        console.log(str);
+        
+    
+    </script>
+</body>
+</html>
