@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(num)
+        // var num = 5 
+
+
+        // f1()
+        // function f1() {
+        //     console.log('hello')
+        // }
+
+
+
+        // 预解析
+        // 1.变量提升：把当前作用域中变量的声明提升到到当前作用域的最上面，不包括变量的赋值
+        // 2.函数提升：把当前作用域中函数的声明提升到当前作用域的最上面，不包括函数的调用
+
+
+        1.
+        console.log(num)
+        var num = 5
+
+        // 预解析
+        var num
+        console.log(num)
+        num = 5
+
+
+        2.
+        f1()
+
+        function f1() {
+            console.log('hello')
+        }
+
+        //预解析
+        function f1(){
+            console.log('hello')
+        }
+        f1()
+
+
+        // 案例1
+        var a = 25
+        function abc() {
+            alert(a)
+            var a = 10
+        }
+        abc()
+
+        //全局作用域预解析
+        var a 
+        function abc() {
+            // 局部作用域的预解析
+            var a 
+            alert(a)
+            a = 10
+        }
+        a = 25
+        abc()
+
+
+
+
+        //案例2
+        console.log(a)
+        function a() {
+            console.log('aaaaa')
+        }
+        var a = 1
+        console.log(a)
+
+
+        //如果在预解析的过程中函数和变量的名字相同，此时函数有限
+        // 全局作用域预解析
+        var a 
+        function a() {
+            console.log('aaaaa')
+        }
+        console.log(a)//打印的是函数
+        a = 1
+        console.log(a)
+    </script>
+</body>
+
+</html>

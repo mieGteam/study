@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 全局作用域  0级作用域链
+        var num = 5
+
+        function f1() {
+            // f1局部作用域  1级作用域链
+            var num = 15
+
+            function f2() {
+                // f2局部作用域  2级作用域链
+                console.log(num)
+            }
+            f2()
+            //调用f2的时候先在f2的作用域中寻找num的值，没有的话就在上一级找，以此类推直至找到为止
+        }
+
+        f1()
+    </script>
+</body>
+
+</html>
