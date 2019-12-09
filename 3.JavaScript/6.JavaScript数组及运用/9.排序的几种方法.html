@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 冒泡排序：
+    // 选择排序：第一个数与剩下所有的相比较，若发现有比他大的，就与其换位置,然后从该位置继续开始，依次与后面的值相比较
+    var arr = [12, 45, 37, 66, 84, 60] 
+    for (var i = 0; i<arr.length-1; i++){
+        for (var j =i+1;j<arr.length;j++) {
+            if (arr[i]>arr[j]){
+                var word = arr[j]
+                arr[j] = arr [i] 
+                arr[i] = word
+            }
+        }
+    }
+    console.log(arr)
+    </script>
+</body>
+</html>

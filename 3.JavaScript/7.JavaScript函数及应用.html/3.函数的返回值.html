@@ -45,6 +45,10 @@
 
 
     // 求1！+2！+3！+...+n！
+    // var num = function(){
+    //     console.log(111)
+    // }
+    // num()
     function getJieCheng(n){
         var result = 1;
         for(var i= 1;i<=n;i++){
@@ -57,10 +61,13 @@
         var sum = 0
         for (var i = 1;i<n;i++){
             // 累加的是每一个数的阶乘
-            sum+=getJieCheng(i)
+            var a = getJieCheng(i)
+            sum+=a
         }
         return sum
     }
+    // var num = getSum(4)
+    // console.log('num:'+num)
     console.log(getSum(5))
 
 
@@ -73,6 +80,22 @@
     }
     var r = test(5,6)
     console.log(r)
+
+
+
+    function nimasile() {
+        console.log('huangyimiao')
+    }
+    // console.log(nimasile)
+    // var nimasile = function(){
+    //     ...
+    // }
+
+    // var nimasile = 555
+    console.log(nimasile())
+
+        
+
     </script>
 </body>
 </html>
