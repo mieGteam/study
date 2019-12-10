@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        background-color: rgb(100,100,100);
+    }
+    </style>
+</head>
+<body>
+    <script>
+    // 1.求10——20之间的随机数  [10，20] 整数
+    //  Math.random()  --> [0, 1) 小数
+    // Math.random() *20  --> [0,20)  包含小数部分
+    // Math.random() * (20 - 10)  -->  [0, 10)  包含小数部分
+    // Math.random() * (20 - 10) + 10 --> [10,20) 包含小数部分
+    
+
+    // Math.floor(Math.random() * (max - min +1) + min )
+    Math.floor(Math.random() * (20 - 10 +1) + 10 )
+
+
+    // 2.随机生成颜色RGB [0, 255] 整数
+    // Math.floor(Math.random() * (max - min + 1) + min)
+      function random(min, max) {
+            return Math.floor(Math.random() * (max- min +1) + min)
+        }
+      function randomRGB(min,max) {
+      
+        var color1 = random(min, max)
+        var color2 = random(min, max)
+        var color3 = random(min, max)
+
+        return 'rgb('+ color1 +',' + color2 + ',' + color3 + ')'
+    }
+    console.log(randoRGB(0,255))
+
+
+    // 3.模拟实现max()/min()
+    // console.log(Math.max(23, 1, 4, 2, 10))
+    // function max() {
+    //     // arguments.length
+    //     var max = arguments[0]
+    //     for (var i = 1; i<arguments.length; i++) {
+    //         if(max < arguments[i]){
+    //             max = arguments[i]
+    //         }
+    //     }
+    //     return max
+    // }
+    // console.log(max(5, 1, 100, 23))
+
+
+    var myMath = {
+        max: function() {
+            var max = arguments[0]
+        for (var i = 1; i<arguments.length; i++) {
+            if(max < arguments[i]){
+                max = arguments[i]
+            }
+        }
+        return max
+    }
+   
+// min:function() {
+
+        // }
+        }
+        console.log(max(5, 1, 100, 23)) 
+    </script>
+    
+</body>
+</html>

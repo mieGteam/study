@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // contat()  —— 把参数拼接到当前数组
+    // slice()  ——  从当前数组中截取一个新的数组，不影响原来的数组，参数start从0开始，end从1开始
+    // splice()  ——  删除或替换当前数组的某些项目，参数start，deleteCount，options(要替换的项目)
+    
+    var arr = [1, 2, 3];
+
+    // 清空数组 //推荐使用
+    arr = [];
+    console.log(arr);
+
+    arr.length = 0;
+    console.log(arr);
+    
+    //  第一个参数，是从什么位置开始删除 索引
+    //  第二个参数，删除多少个元素
+    arr.splice(0, arr.length);
+    console.log(arr);
+
+  
+    </script>
+</body>
+</html>
