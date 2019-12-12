@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    1.字符方法
+    <!-- 获取指定位置处字符 -->
+        charAt()  
+        
+    <!-- 获取指定位置处字符的ACSII码 -->
+        charCodeAt()
+
+    <!-- HTML5,IE8+支持   和charAt()等效 -->
+        str[0]
+
+
+
+    2.字符串操作方法
+    <!-- 拼接字符串，等效于+,+更常用 -->
+        concat()
+    
+    <!-- 从start位置开始，截取到end位置，end取不到 -->
+        slice()
+    
+    <!-- 从start位置开始，截取到end位置，end取不到 -->
+        substring()
+
+    <!-- 从start位置开始，截取length个字符 -->
+        **substr()**
+
+    
+
+    3.位置方法
+    <!-- 返回指定内容在原字符串中的位置索引 -->
+        indexOf()
+
+    <!-- 从后往前找，都只找第一个匹配的 -->
+        lastIndexOf()
+
+
+
+    4.去除空白
+    <!-- 只能去除字符串前后的空白 -->
+        trim()
+
+
+
+    5.大小写转换方法
+    <!-- 转换大写 -->
+        to*(Locale)*UpperCase()
+    
+    <!-- 转换小写 -->
+        to*(Locale)*LowerCase()
+
+
+
+    6.其他
+
+        search()
+
+    <!-- 替换，但只能替换第一个找到的元素 -->
+        replace()
+
+    <!-- 切割字符串 -->
+        split()
+
+
+
+
+        <script>
+        //    —————— 演示 ——————
+       
+        // concat():
+            var a = 'abc'
+            var b = '123'
+            // a+b
+            console.log(a.concat(b))
+
+
+        // 转换大小写：
+        var str = 'abCdEFg'
+            // 转换成小写
+        console.log(str.toLowerCase())
+        // console.log(str.toLocaleLowerCase())
+            // 转换成大写
+        console.log(str.toUpperCase())
+        // console.log(str.toLocaleUpperCase())
+
+
+        // search():
+        var str = 'abcdef'
+
+        console.log(str.search('bc'))
+        //和indexOf用法差不多，找不到的时候都是-1，但是search()比indexOf()强大很多，可以支持正则表达式
+        
+        </script>
+</body>
+</html>

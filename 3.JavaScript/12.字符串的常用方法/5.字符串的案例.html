@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // 字符串的所有方法 都不会修改原始字符串(字符串的不可变性)，都会返回一个新的字符串
+
+    // 截取字符串"我爱中华人民共和国"，中的"中华"
+    // var s = '我爱中华人民共和国';
+    // // 第一个参数，截取的开始位置
+    // // 第二个参数，截取的长度
+    // var newStr = s.substr(2, 2);
+    // console.log(newStr);
+
+
+    // 获取url中?后面的内容
+    // 例如：http://www.itheima.com/login?name=zs&age=18&a=1&b=2
+    
+    var url = 'http://www.itheima.com/login?name=zs&age=18&a=1&b=2';
+
+    // console.log(url.substr(2));
+    // var index = url.indexOf('?') + 1;
+    // console.log(url.substr(index));
+
+
+    // {
+    //   name: 'zs',
+    //   age: 18
+    // }
+    
+    // 获取url后面的参数
+    function getParams(url) {
+      // 获取? 后面第一个字符的索引
+      var index = url.indexOf('?') + 1;
+      // url中?后面的字符串 name=zs&age=18&a=1&b=2
+      var params = url.substr(index);
+      // 使用& 切割字符串 ，返回一个数组
+      var arr = params.split('&');
+      var o = {};
+      // 数组中每一项的样子 key = value
+      for (var i = 0; i < arr.length; i++) {
+        var tmpArr = arr[i].split('=');
+        var key = tmpArr[0];
+        var value = tmpArr[1];
+
+        o[key] = value;
+      }
+      return o;
+    }
+
+    var obj = getParams(url);
+    console.log(obj);
+
+    console.log(obj.name);
+    console.log(obj.age);
+
+
+    
+
+  
+
+
+
+
+    // "abcoefoxyozzopp"查找字符串中所有o出现的位置
+    
+    // indexOf  lastIndexOf
+    // var s = 'abcoefoxyozzopp';
+    // // 当查找不到的时候返回的是-1
+    // // console.log(s.indexOf('o', 4));
+    // var index = -1;
+    // do {
+    //   index = s.indexOf('o', index + 1);
+    //   if (index !== -1) {
+    //     console.log(index);
+    //   }
+    // } while (index !== -1);
+
+
+
+
+
+    // 把字符串中所有的o替换成!
+    // var s = 'abcoefoxyozzopp';
+
+    // //  abc!efoxyozzopp
+    // //  只会替换第一个找到的字符串
+    // // s = s.replace('o', '!');
+    // // console.log(s);
+    // // 
+    // var index = -1;
+    // do {
+    //   index = s.indexOf('o', index + 1);
+
+    //   if (index !== -1) {
+    //     // 替换
+    //     s = s.replace('o', '!');
+    //   }
+    // } while(index !== -1);
+    // console.log(s);
+    
+    
+    
+    // 把字符串中的所有空白去掉'   abc       xyz  a    123   '
+   
+    // trim() 只可以去除字符串前后的空格
+    // s = s.trim();
+    // console.log('===' + s + '===');
+    // 
+    // 思路1 可以把 字符串中的所有  空格 字符串  用replace替换成 ''空字符串
+    // 思路2 使用split 简化
+    
+    // split 演示如何使用
+    // var str = 'a,b,c,d';
+    // var arr = str.split(',');
+    // console.log(arr.join('!'));
+    // // 
+     // var s = '   abc       xyz  a    123   ';   
+     // var arr = s.split(' ');
+     // console.log(arr.join(''));
+
+    
+
+    // 判断一个字符串中出现次数最多的字符，统计这个次数
+    // abcoefoxyozzopp
+    // 
+    // 出现次数最多的字符  和  此字符出现的次数
+    // 
+    // 1 统计每一个字符出现的次数
+   
+    // 
+    // 要求的出现次数最多的字符
+    // var s = 'abcoefoxyozzopp';
+    // var ch;
+    // // 此字符出现的次数
+    // var num;
+    // // 记录字符串中每一个字符出现的次数
+    // var o = {}; 
+
+    // for (var i = 0; i < s.length; i++) {
+    //   var item = s.charAt(i);
+    //   if (o[item]) {
+    //     // 已经有该属性，+1
+    //     o[item]++;
+    //   } else {
+    //     // 对象中没有该属性
+    //     o[item] = 1;
+    //   }
+    // }
+
+    //  // 2 求最大值 并且找到次数最多的字符
+    //  // 假设最大值是1
+    //  num = 1;
+    //  for (var key in o) {
+    //    if (num < o[key]) {
+    //     // 最多的次数
+    //      num = o[key];
+    //      // 次数最多的字符
+    //      ch = key;
+    //    }
+    //  }
+
+    //  console.log(num);
+    //  console.log(ch);
+     
+
+    
+    
+    
+  
+    </script>
+</body>
+</html>

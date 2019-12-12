@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 3. 工资的数组[1500, 1200, 2000, 2100, 1800],把工资超过2000的删除
+    var arr = [1500, 1200, 2000, 2100, 1800];
+      // filter(+函数)内部自带循环
+    var newArray = arr.filter(function (item) {
+      // item就是数组中的每一个元素
+      return item < 2000;
+    })
+    console.log(newArray);
+
+    // ['c', 'a', 'z', 'a', 'x', 'a']找到数组中每一个a出现的位置
+    var arr = ['c', 'a', 'z', 'a', 'x', 'a'];
+
+    // 从前往后找元素
+    console.log(arr.indexOf('a'));
+    // // 从后往前找
+    console.log(arr.lastIndexOf('a'));
+
+    // indexOf的第二个参数，设置indexOf查找的开始位置，从第几个位置开始找
+    // console.log(arr.indexOf('a', 2));
+    // 如果没有找到元素 indexOf  会返回-1
+    
+
+
+    // 不知道循环次数： while   do...while   已知循环次数:for
+    var index = -1;
+    do {
+      index = arr.indexOf('a', index + 1);
+
+      if (index !== -1) {
+        console.log(index);
+      }
+    } while (index !== -1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 把字符串中的所有空白去掉   abc  xyz  a  123
+    var s = '     abc   xyz   a      123'
+   // trim只能去掉字符串前后的空格 
+    //   s = s.trim()
+    // console.log('===' + s + '===')
+
+    // 思路1 :  可以把字符串中的所有 空格 字符串 用 replace替换成''空字符串
+
+    // 思路2 ：用split 简化
+    // split 演示如何使用
+    var str = 'a,b,c,d'
+    var arr = str.split(',')
+    console.log(arr.join('!'))//arr.join括号里不加东西，就是用，分隔
+    </script>
+</body>
+</html>

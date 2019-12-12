@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 判断一个字符串中出现次数最多的字符，统计这个次数
+    // abcoefoxyozzopp
+
+    // 出现次数最多的字符  和  此字符出现的次数
+
+    // 1.统计每一个字符出现的次数
+    // 2.求最大值
+
+
+    // 要求的出现次数最多的字符
+    var ch
+    // 此字符出现的次数
+    var num 
+
+    // 记录字符串中每一个字符出现的次数
+    var o = {}
+
+    for(var i = 0; i < s.length; i++){
+        var item = s.charAt(i)//获取字符中第几个字符
+        if (o[item]) {
+            // 已经有该属性 +1
+            o[item]++
+        } else {
+            // 对象中没有该属性
+            o[item] = 1
+        }
+    }
+
+    // 2.求最大值，并且找到次数最多的字符
+    // 假设最大值是1
+    num = 1
+    for (var key in o){
+        if (num < o[key]) {
+//    ???         //最多的次数
+            num = o[key]
+        //  ???   // 次数最多的字符
+            ch = key
+        }
+    }
+    console.log(num)
+    console.log(ch)
+    </script>
+</body>
+</html>
