@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #box {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+    }
+    .show{
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn" value="隐藏">
+    <br>
+    <div id="box">
+
+    </div>
+
+
+    <script>
+    // 1.获取元素
+    var btn = document.getElementById('btn')
+    // 2.给按钮注册事件
+    btn.onclick = function() {
+        var box = document.getElementById('box')
+        // 为什么DOM对象对应的标签的class属性名字叫className？是因为class在JS中是关键字
+        // 关键字不可以作为变量或者属性的名字
+        box.className = 'hidden'
+        // 如何设置按钮对应的元素的属性
+        // btn.value = '显示'
+        this.value = '显示'//通过this来指向事件源
+    }
+    // 3.控制div的显示隐藏
+    // 4.改变按钮中的文字
+    </script>
+</body>
+</html>

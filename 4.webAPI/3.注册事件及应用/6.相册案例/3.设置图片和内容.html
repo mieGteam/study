@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        美女画廊
+    </h2>
+    <div id="imagegallery">
+        <a href="../images/1.jpg" title="美女A">
+            <img src="../images/1-small.jpg" width="100px" alt="美女1">
+        </a>
+        <a href="../images/2.jpg" title="美女B">
+            <img src="../images/2-small.jpg" width="100px" alt="美女2">
+        </a>
+        <a href="../images/3.jpg" title="美女C">
+            <img src="../images/3-small.jpg" width="100px" alt="美女3">
+        </a>
+        <a href="../images/4.jpg" title="美女D">
+            <img src="../images/4-small.jpg" width="100px" alt="美女4">
+        </a>
+    </div>
+    <div style="clear:both"></div>
+    <img id="image" src="../images/placeholder.png" alt="" width="450px">
+    <p id="des">选择一张图片</p>
+    <script>
+        // 1.获取所有a标签
+        var imagegallery = document.getElementById('imagegallery')
+        var links = imagegallery.getElementsByTagName('a')
+        // 2.给所有a标签注册事件
+        for(var i = 0; i < links.length; i++) {
+            //所有的a标签对应的元素
+            var link = links[i]
+                //注册事件
+            link.onclick = function() {
+                
+                // 4.切换图片
+            //获取占位大图的img标签
+            var image = document.getElementById('image')
+            // 把img标签的src属性设置为当前点击的a标签的href
+            // image.src = link.href
+            // 当循环结束之后，link是最后一个a标签
+            image.src = this.href
+                // 5.设置p标签的内容
+            var des = document.getElementById('des')
+            // 当前点击a标签的title属性
+            // this.title
+            // 如何设置p标签中显示的内容
+            // console.log(des)
+            // 打印元素
+            // console.dir(des)
+            des.innerHTML = this.title 
+
+
+                // 3.取消a标签的默认行为
+                return false
+            }
+        }
+
+        
+            
+    </script>
+</body>
+</html>
+</body>
+</html>

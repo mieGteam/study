@@ -14,7 +14,7 @@
     function fn() {
         console.log(this)
     }
-    fn ()
+    window.fn()
     // 2.在方法中  ————指向的是这个方法所属的对象
     var obj = {
         name:'zs',
@@ -22,13 +22,26 @@
             console.log(this)
         }
     }
+    obj.fn()
+
     // 3.构造函数中  ————this就是构造函数创建的对象
     function Fn() {
         this.name = 'zs'
         console.log(this)
     }
-//    var o = new Fn()  //调用构造函数
+      var o = new Fn()  //调用构造函数
+     console.log(o)
 Fn() //函数调用
+
+
+    // ES5中的this指向与他的定义无关，只与执行有关
+    // this的指向：一般来说.前是什么就指向什么，但也有特例
+    function dn(x) {
+        console.log(this,x)
+    }
+    var arr = [dn,12,67,44,85]
+    arr[0](22)
+    
     </script>
 </body>
 </html>

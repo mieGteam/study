@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        hello
+    </div>
+    <script>
+        // 如何知道浏览器是否支持元素的某个属性
+        var box = document.getElementById('box')
+        console.log(getInnerText(box))
+        // // 当属性不存在的时候，返回undefined
+        // console.log(typeof box.a)
+        // // 当属性存在的时候，返回该属性类型
+        // console.log(typeof box.id)
+
+
+
+        //处理InnerText的兼容性问题
+        function getInnerText(element) {
+            // 判断当前浏览器是否支持元素的innerText属性
+            // 如果支持，使用element.innerText
+            // 如果不支持，使用element.textContent属性
+
+            if(typeof element.innerText === 'string') {
+                return element.innerText
+            }else {
+                return element.textContent
+            }
+        }   
+        
+        
+
+        //设置内容的时候
+        // 不带标签：innerText
+        // 带标签：innerHTML
+    </script>
+</body>
+</html>
