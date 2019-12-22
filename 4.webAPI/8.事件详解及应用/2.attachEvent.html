@@ -7,17 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="button" value="按钮" id="btn">
     <script>
-    // 字符串的不可变
-    var s = 'abc'
-    s = 'xxxxxxyyy'
+    var btn = document.getElementById('btn')
 
-    // 当拼接大量字符串的时候，会有性能问题
-    var s = ''
-    for(var i = 0;i<100000;i++){
-        s = s + i
-    }
-    console.log(s)  // 
+    //第一个参数，事件的名称前要加on
+    btn.attachEvent('onclick',function() {
+        alert('hello world')
+    })
     </script>
 </body>
 </html>

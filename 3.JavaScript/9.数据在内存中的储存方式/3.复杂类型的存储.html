@@ -32,18 +32,18 @@
     var num = 1
     var nuum = num
     num = 2
-    console.log(nuum)  //2
+    console.log(nuum)  //1   变量之间不会互相影响，与方程类似
 
 
     var obj = {num:1}
-    var obj2 = {num:1}
+    var obj2 = obj
     console.log(obj)
 
 
     obj.num = 2
     obj = {num:2}
 
-    console.log(obj2.num) //2
+    console.log(obj2.num) //2   变量之间会互相影响，因为有指向的存在
 
     </script>
 </body>

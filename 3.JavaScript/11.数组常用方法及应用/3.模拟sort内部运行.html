@@ -8,8 +8,7 @@
 </head>
 <body>
     <script>
-    //运行方式不懂
-
+    
     // 对数组排序，从小到大  -- 冒泡排序
     function sort(array, fnCompare) {
       // 外层循环 控制趟数
@@ -19,7 +18,7 @@
         // 内层循环 控制比较的次数
         for (var j = 0; j < array.length - 1 - i; j++) {
 
-          if (fnCompare(array[j], array[j + 1]) > 0) {
+          if (fnCompare(array[j],array[j + 1]) > 0) {
             isSort = false;
             // 交换位置
             var tmp = array[j];
@@ -34,8 +33,13 @@
       }
     } 
 
-    var arr = [56, 10, 1, 17];
+    var arr = [56, 17 , 1 ,10];
     
+
+
+    // 1. 56 ， 56 10 1
+    // 2. 10 ， 56 10
+    // 3. 1 ，  56
 
     sort(arr, function (a, b) {
       return b - a;

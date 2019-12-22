@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <ul id ='ul'>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+
+    <ul id="sel">
+
+    </ul>
+    <script>
+    //createElement()   appendChild()
+    //removeChild()  删除
+    
+    
+    //insertBefore()  把元素插入到页面的指定位置
+    //replaceChild()  把当前元素的标签进行替换
+
+    var btn = document.getElementById('btn')
+    btn.onclick = function() {
+        var li = document.createElement('li')
+        li.innerText = 'abc'
+
+        // 把li插入到ul中的第一个位置
+        // var ul = document.getElementById('ul')
+        // ul.insertBefore(li,ul.children[0])
+        // (插入的元素，从哪一个元素之前插入)
+
+
+
+        // replaceChild()
+        // var div = document.createElement('div')
+        // div.innerText = 'div'
+        // var ul = document.getElementById('ul')
+        // ul.replaceChild(div,ul.children[0])
+
+
+
+
+        // appendChild()
+        var ul = document.getElementById('ul')
+        var sel = document.getElementById('sel')
+        sel.appendChild(ul.children[0])
+    }
+    </script>
+</body>
+</html>

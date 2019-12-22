@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-    // this出现在以下位置，分别代表什么:
+        // 在function中，this指向与他的定义无关，只与执行有关
+        // this指向只能是对象
+        // 全局变量中，this指向window
 
-    // 1.函数中  -——this  指向window
-    function fn() {
-        console.log(this)
-    }
-    window.fn()
-    // 2.在方法中  ————指向的是这个方法所属的对象
-    var obj = {
-        name:'zs',
-        fn: function() {
+
+        // this出现在以下位置，分别代表什么:
+
+        // 1.函数中  -——this  指向window
+        function fn() {
             console.log(this)
         }
-    }
-    obj.fn()
-
-    // 3.构造函数中  ————this就是构造函数创建的对象
-    function Fn() {
-        this.name = 'zs'
-        console.log(this)
-    }
-      var o = new Fn()  //调用构造函数
-     console.log(o)
-Fn() //函数调用
+        window.fn()
 
 
-    // ES5中的this指向与他的定义无关，只与执行有关
-    // this的指向：一般来说.前是什么就指向什么，但也有特例
-    function dn(x) {
-        console.log(this,x)
-    }
-    var arr = [dn,12,67,44,85]
-    arr[0](22)
-    
+
+
+
+        // 2.在方法中  ————指向的是这个方法所属的对象
+        var obj = {
+            name: 'zs',
+            fn: function () {
+                console.log(this)
+            }
+        }
+        obj.fn()
+
+        // this的指向：一般来说.前是什么就指向什么，但也有特例
+        function dn(x) {
+            console.log(this, x)
+        }
+        var arr = [dn, 12, 67, 44, 85]
+        arr[0](22)
+
+
+
+
+        // 3.构造函数中  ————this就是构造函数创建的对象
+        function Fn() {
+            this.name = 'zs'
+            console.log(this)
+        }
+        var o = new Fn() //调用构造函数
+        console.log("$", o)
+        Fn() //函数调用
+
+
+
+
+
+        // 4.在事件中的函数，this会指向触发事件的事件源
+        btn.onclick = function () {
+            var box = document.getElementById('box')
+
+            box.className = 'hidden'
+
+            // btn.value = '显示'
+            this.value = '显示' //通过this来指向事件源
+        }
+
+
+
+        
     </script>
 </body>
+
 </html>

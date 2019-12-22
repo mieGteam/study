@@ -16,17 +16,17 @@
       <option value="5">武汉</option>
     </select>
     <script>
-      // 1 给按钮注册事件
+      // 1.给按钮注册事件
       var btnSet = document.getElementById('btnSet');
       btnSet.onclick = function () {
-        // 2 获取下拉框中的所有option
+        // 2.获取下拉框中的所有option
         var selCities = document.getElementById('selCities');
         var options = selCities.getElementsByTagName('option');
-        // 3 随机生成索引
+        // 3.随机生成索引
         // Math.random() -> [0, 1)
         // Math.random() * 5 -> [0, 5)
         var randomIndex = parseInt(Math.random() * options.length);
-        // 4 根据索引获取option，并让option选中
+        // 4.根据索引获取option，并让option选中
         var option = options[randomIndex];
         option.selected = true;
       }

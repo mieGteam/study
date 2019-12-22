@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <script src="common.js"></script>
+    <script>
+        var btn = my$('btn')
+        function btnClick() {
+            alert('hello')
+            //移除事件
+        removeEventListener(btn, 'click', btnClick)
+        }
+        addEventListener(btn, 'click', btnClick)
+    
+    
+    // 移除事件的兼容性处理
+        function removeEventListener(element, eventName, fn){
+        if (element.removeEventListener){
+            element.removeEventListener(eventName, fn)
+        } else if (element.detachEvent) {
+            element.detachEvent('on'+ eventName, fn)
+        } else {
+            element['on' + eventName] = null
+        }
+    }
+    </script>
+</body>
+</html>

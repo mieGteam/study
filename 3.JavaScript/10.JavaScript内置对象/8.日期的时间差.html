@@ -41,10 +41,10 @@
         // 两个日期对象相差的秒数
         // interval = interval / 1000
         interval /= 1000
-        day = Math.round(interval / 60 / 60 / 24) 
-        hour =  Math.round (interval / 60 / 60 % 24)
-        minute =  Math.round (interval / 60 % 60)
-        second =  Math.round (interval %60)
+        day = Math.floor(interval / 60 / 60 / 24)  //1
+        hour =  Math.floor (interval / 60 / 60 % 24)
+        minute =  Math.floor (interval / 60 % 60)
+        second =  Math.floor (interval %60)
 
         return {
             day:day,
