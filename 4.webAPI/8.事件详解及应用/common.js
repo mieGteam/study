@@ -64,3 +64,26 @@ function removeEventListener(element, eventName, fn) {
         element['on' + eventName] = null
     }
 }
+
+
+ // 获取页面滚动距离的浏览器兼容性问题
+        //获取页面滚动出去的距离
+        function getScroll() {
+            var scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft //返回0的话，在布尔类型中是false
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+            return {
+                scrollLeft:scrollLeft,
+                scrollTop:scrollTop
+            }
+        }
+
+
+         // 获取鼠标在页面上的位置，处理浏览器兼容性
+         function getPage(e) {
+            var pageX = e.pageX || e.clientX + getScroll().scrollLeft
+            var pageY = e.pageY || e.clientY + getScroll().scrollTop
+            return{
+                pageX:pageX,
+                pageY:pageY
+            }
+        }
