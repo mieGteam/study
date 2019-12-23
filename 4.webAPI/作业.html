@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script src="common.js"></script>
+    <script>
+        // var box = document.getElementById('box')
+        var ul = document.getElementsByTagName('ul')[0]
+        var li = document.getElementsByTagName('li')
+        ul.onmouseover = function () {
+            ul.style.backgroundColor = 'green'
+        }
+        ul.onmouseout = function () {
+            ul.style.backgroundColor = ''
+        }
+        for (var i = 0; i < li.length; i++) {
+            // var li =li[i]
+            li[i].onmouseover = function (e) {
+                this.style.backgroundColor = 'red'
+                e.cancelBubble = true
+            }
+            li[i].onmouseout = function () {
+                this.style.backgroundColor = ''
+            }
+        }
+
+
+        //    第一趟：i= 0   li = 1   li.onmouseover = function() {li.style.bgc = 'red'}
+        //    第一趟：i= 1   li = 2   li.onmouseover = function() {li.style.bgc = 'red'}
+    </script>
+
 </body>
+
 </html>
