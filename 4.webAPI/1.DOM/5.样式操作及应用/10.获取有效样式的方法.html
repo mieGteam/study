@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        border: 1px solid red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <script src="../../../common.js"></script>
+    <script>
+        var box = document.getElementById('box')
+        // console.log(box)
+        // var bd= box.style.width
+        // console.log(color)
+      
+        // getComputedStyle(element))["属性"]
+        // getComputedStyle(box)["width"]
+
+        // console.log(getComputedStyle(box)['background-color'])
+        // IE不支持，IE写法：
+        // console.log(box.currentStyle['width'])
+        
+
+        // let oBox = document.querySelectorAll('div')
+        // console.log(oBox)
+        console.log(getStyle(box,'width'))
+    </script>
+
+
+</body>
+
+</html>

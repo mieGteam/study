@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 0;
+    }
+
+    #box {
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        border: 10px solid red;
+        padding: 10px;
+        background-color: green;
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+
+    </div>
+    <script>
+    var box = document.getElementById('box')
+    // clientLeft 是border-left的宽度
+    // clientTop 是border-top的宽度
+    console.log(box.clientLeft)
+    console.log(box.clientTop)
+
+    // 获取大小   包括padding 但是不包括边框
+    console.log(box.clientWidth)
+    console.log(box.clientHeight)
+
+    // offsetwidth  offsetHeight  包括padding和边框
+    </script>
+</body>
+</html>

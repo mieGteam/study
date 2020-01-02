@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 300px;
+            height: 500px;
+            /* background-color: pink; */
+            margin: 50px auto;
+            position: relative;
+            border: 1px solid black;
+        }
+
+        #time {
+            width: 230px;
+            height: 230px;
+            /* background-color: red; */
+            display: inline-block;
+            position: absolute;
+            margin: 25px 35px;
+            border: 1px solid black;
+        }
+
+        #start {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            /* background-color: skyblue; */
+            top: 290px;
+            left: 100px;
+        }
+
+        #timeout {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            /* background-color: skyblue; */
+            top: 360px;
+            left: 100px;
+        }
+
+        #clear {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            /* background-color: skyblue; */
+            top: 430px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="time"></div>
+        <input type="button" value="开始" id="start">
+        <input type="button" value="暂停" id="timeout">
+        <input type="button" value="清除" id="clear">
+    </div>
+    <script>
+        var time = document.getElementById('time')
+        var box = document.getElementById('box')
+        var start = document.getElementById('start')
+        var timeout = document.getElementById('timeout')
+        var clear = document.getElementById('clear')
+        var hh = 0
+        var mm = 0
+        var ss = 0
+        var hm = 0
+        var str = ''
+        var timeId
+        //点击开始
+        start.onclick = function timer() {
+            clearInterval(timeId)
+            timeId = setInterval(timeStart, 10)
+        }   
+
+        function timeStart() {
+            str = ""
+            if (++hm >= 100) {
+                if (++ss >= 60) {
+                    if (++mm >= 60) {
+                        mm = 0
+                        // hh++
+                    }
+                    ss = 0
+                    // mm++
+                }
+                hm = 0
+                // ss++
+            }
+
+
+
+            str += hh < 10 ? "0" + hh : hh;
+            str += ":"
+            str += mm < 10 ? "0" + mm : mm;
+            str += ':'
+            str += ss < 10 ? "0" + ss : ss;
+            str += ':'
+            str += hm < 10 ? "0" + hm : hm;
+
+            time.innerHTML = str
+            // start.onclick = ''
+            // break
+
+        }
+        timeout.onclick = function () {
+            clearInterval(timeId)
+
+        }
+        clear.onclick = function () {
+            clearInterval(timeId)
+            ss = 0
+            hm = 0
+            mm = 0
+            hh = 0
+           
+
+            time.innerHTML = '00:00:00:00'
+        }
+    </script>
+</body>
+
+</html>

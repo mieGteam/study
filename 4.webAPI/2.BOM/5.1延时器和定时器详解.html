@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按钮">
+    <script>
+        // 1.延时器和定时器会被JS特殊处理
+        // setTimeout(function () {
+        //     console.log('gg')
+        // }, 1);
+        // // setTimeout(()=>{
+        // //     console.log('gg')
+        // // },1)
+
+        // // var a
+
+        // (function name() {
+        //     for (var i = 0; i < 3000000000; i++) {
+        //         // console.log('新疆站票')
+        //     }
+        //     console.log('胖爷没脖子')
+        // })()
+
+
+
+
+        // 2.定时器和延时器传参问题
+        // 用return + 想调用的函数，先返回想运行的整个函数，再由setTimeout调用
+        // var b = 'b'
+        // setTimeout(fn('b'), 4000)
+
+        // function fn(a) {
+        //     //把想执行的函数放到return后
+        //     return function () {
+        //         console.log(a)
+        //     }
+        // }
+
+        //setTimeout运行原理
+        // function setTimeout(fun,time){
+        //     fun()()====>4000
+        // }
+
+
+        // 2.函数体整个加引号
+        // var b = 'b'
+        setTimeout("fn('b')", 4000)
+
+        function fn(a) {
+
+            console.log(a)
+        }
+    </script>
+</body>
+
+</html>

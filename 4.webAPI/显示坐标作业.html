@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        #wb {
+            /* background-color: pink; */
+            position: absolute;
+            top: 470px;
+            left: 0;
+            /* visibility: visible; */
+            /* display: block; */
+            /* float: left; */
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="wb" class="txt hide">123123123</div>
+    </div>
+    <script>
+        var box = document.getElementById('box')
+        var wb = document.getElementById('wb')
+        box.onmouseover = function () {
+            // var show = txt.className
+            // var show = document.querySelector(show);
+            wb.className = wb.className.replace('hide', 'show')
+        }
+
+        box.onmouseout = function fn() {
+            // var hide = txt.className
+            // var hide = document.querySelector(hide);
+            wb.className = wb.className.replace('show', 'hide')
+        }
+
+
+
+        box.onmousemove = function(e) {
+            e = e || window.event
+            var X = e.offsetX + 'px'
+            var Y = e.offsetY + 'px'
+            if (X === -1 + 'px' || Y === -1 + 'px'){
+                fn()
+            }
+            wb.innerText = X + '   像素' + '  X  ' +  Y + '    像素' 
+        }
+       
+        // var X = box.offsetLeft
+        // var Y = box.offsetTop
+        // console.log(X)
+        // console.log(Y)
+        // wb.innerText = locationX + '   像素' + 'X' + locationY + '    像素' 
+    </script>
+</body>
+
+</html>

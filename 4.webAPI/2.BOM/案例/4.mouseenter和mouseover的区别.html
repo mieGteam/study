@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        #box2 {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <div id="box2">
+
+        </div>
+    </div>
+    <script>
+     var box1 = document.getElementById('box1')
+     var i = 0
+     //触发子元素的mouseover 会冒泡到父元素上
+     //onmoseenter不会触发事件冒泡  mouseleave 和mouseout同理
+     box1.onmouseenter = function() {
+         i++
+         console.log(i)
+     }
+    </script>
+</body>
+
+</html>
